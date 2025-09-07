@@ -5,6 +5,11 @@ library(tidyverse)
 library(ggstatsplot)
 library(ggbeeswarm)
 
+library(RColorBrewer)
+library(dplyr)
+library(ggplot2)
+
+
 # Función para cargar y procesar datos de cada banda
 get_df <- function(band = "gamma") {
   df_10 <- read_csv(paste0("resultados_rqa_", band, "/carga_10_", band, ".csv"))
@@ -25,7 +30,7 @@ get_df <- function(band = "gamma") {
   return(df)
 }
 
-# Función para renombrar condiciones (elimina repetición de código)
+# Función para renombrar condiciones
 rename_conditions <- function(df) {
   df %>%
     mutate(condicion = case_when(
@@ -51,13 +56,17 @@ big_all <- bind_rows(big_mu, big_beta, big_gamma)
 
   # Función con pruebas estadísticas (CORREGIDA)
 plot_violins_side_by_side <- function(big_mu, big_beta, big_gamma, 
-                                        label = "condicion", col = "recurrence_rate", paired = FALSE) {
+                                        label = "condicion", col = "recurrence_rate", paired = FALSE, y_name = "Recurrence Rate") {
     
     bands <- list(
       mu    = list(df = big_mu,    palette = "Reds"),
       beta  = list(df = big_beta,  palette = "Greens"),
       gamma = list(df = big_gamma, palette = "Blues")
     )
+    
+    global_min <- min(big_mu[[col]], big_beta[[col]], big_gamma[[col]], na.rm = TRUE)
+    global_max <- max(big_mu[[col]], big_beta[[col]], big_gamma[[col]], na.rm = TRUE)
+    global_cut <- (global_max - global_min) * 0.3
     
     make_plot <- function(df, palette, band, show_ylabel = FALSE) {
     
@@ -68,22 +77,24 @@ plot_violins_side_by_side <- function(big_mu, big_beta, big_gamma,
       df[[label]] <- factor(df[[label]], levels = c("SE10", "SE5", "AM"))
       my_comparisons <- list( c("SE10", "SE5"), c("SE5", "AM"), c("SE10", "AM") )
       ggplot(df, aes_string(x = label, y = col, fill = label)) +
-        geom_violin(trim = FALSE, alpha = 1, show.legend = FALSE, adjust = 1) +
+        geom_violin(trim = FALSE, alpha = 1, show.legend = FALSE, adjust = 1, linewidth = 0.7) +
         geom_boxplot(width = 0.15, alpha = 0.6, show.legend = FALSE, 
                      fill = "white", outlier.shape = 1, outlier.alpha = 0.3, 
                      outlier.size = 2) +
+        ylim(global_min - global_cut, global_max + global_cut)+
         #geom_beeswarm(corral.width = 0.1, col = label)+
-        scale_fill_brewer(palette = palette) +
+        scale_fill_brewer(palette = palette, direction = -1) +
         stat_compare_means(comparisons = my_comparisons, method = "t.test",
                            label = "p.signif", hide.ns = TRUE, show.legend = TRUE, paried=paired) +
-        stat_compare_means(label.y = max(df[[col]] + 0.5, na.rm = TRUE)) +
+        #stat_compare_means(label.y = max(df[[col]] + 0.2, na.rm = TRUE)) +
+        
         theme_classic(base_size = 10) +
         theme(
           legend.position = "none",
           axis.title.x = element_blank(),
           axis.title.y = if (show_ylabel) element_text(size = 14) else element_blank()
         ) +
-        labs(title = band, y = if (show_ylabel) "Recurrence Rate" else NULL)
+        labs(title = band, y = if (show_ylabel) y_name else NULL)
     }
     
     p_mu    <- make_plot(bands$mu$df,    bands$mu$palette,    "μ", show_ylabel = TRUE)
@@ -92,17 +103,11 @@ plot_violins_side_by_side <- function(big_mu, big_beta, big_gamma,
     
     combined <- patchwork::wrap_plots(p_mu, p_beta, p_gamma) + plot_layout(guides = "collect")
     
-    # AGREGADO: return para que la función devuelva el plot
+    
     return(combined)
   }
   
-  # Ejemplo de llamada
-  plot_result <- plot_violins_side_by_side(big_mu, big_beta, big_gamma, 
-                                           label = "condicion", col = "recurrence_rate")
-  
-  # Mostrar el plot
-  plot_result
-
+ 
 # ANOVA (opcional - análisis estadístico adicional)
 # anova_result <- aov(recurrence_rate ~ condicion * band, data = big_all)
 # summary(anova_result)
@@ -128,7 +133,10 @@ big_mu %>%
 library(dplyr)
 library(readr)
 
-# Función para cargar y procesar datos de cada banda
+## -------------------------------------------------------------------
+
+
+## Función para cargar y procesar datos de cada banda
 get_df <- function(band = "gamma") {
   # Cargamos los CSVs
   df_10 <- read_csv(paste0("resultados_rqa_", band, "/carga_10_", band, ".csv"))
@@ -161,7 +169,6 @@ get_df <- function(band = "gamma") {
 }
 
 
-
 # Función para renombrar condiciones (elimina repetición de código)
 rename_conditions <- function(df) {
   df %>%
@@ -186,10 +193,34 @@ big_gamma <- rename_conditions(big_gamma)
 # Combinamos todos los datos
 big_all <- bind_rows(big_mu, big_beta, big_gamma)
 
+
+
 # Ejemplo de llamada
 plot_result <- plot_violins_side_by_side(big_mu, big_beta, big_gamma, 
-                                         label = "condicion", col = "mean_recurrence_rate", paired = TRUE)
+                                         label = "condicion", col = "mean_trapping_time", paired = TRUE)
 
 # Mostrar el plot
 plot_result
+
+
+cols =  colnames(big_mu)
+
+
+# Ejemplo de llamada
+plot_result <- plot_violins_side_by_side(big_mu, big_beta, big_gamma, 
+                                         label = "condicion", col = cols[10], paired = TRUE, y_name = "Laminarity")
+
+
+# Mostrar el plot
+plot_result
+
+
+
+
+
+
+
+
+
+
 
