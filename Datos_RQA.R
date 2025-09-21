@@ -69,18 +69,30 @@ plot_violins_side_by_side <- function(big_mu, big_beta, big_gamma,
     global_cut <- (global_max - global_min) * 0.3
     
     make_plot <- function(df, palette, band, show_ylabel = FALSE) {
-    
+      subject_id <- "sujeto"
     
       # Convertir a factor con orden específico (descomentado)
       
+      
+      
       #comps <- combn(unique(df[[label]]), 2, simplify = FALSE)
       df[[label]] <- factor(df[[label]], levels = c("SE10", "SE5", "AM"))
+      
+      df_summary <- df %>%
+        group_by(!!sym("sujeto"), !!sym(label)) %>%
+        summarise(value = median(!!sym(col), na.rm = TRUE), .groups = "drop")
+      
       my_comparisons <- list( c("SE10", "SE5"), c("SE5", "AM"), c("SE10", "AM") )
       ggplot(df, aes_string(x = label, y = col, fill = label)) +
         geom_violin(trim = FALSE, alpha = 1, show.legend = FALSE, adjust = 1, linewidth = 0.7) +
         geom_boxplot(width = 0.15, alpha = 0.6, show.legend = FALSE, 
                      fill = "white", outlier.shape = 1, outlier.alpha = 0.3, 
                      outlier.size = 2) +
+        geom_line(data = df_summary, aes_string(x = label, y = "value", group = "sujeto"),
+                  size = 1, color = "#6F6F6F", alpha = 0.5) +
+        geom_point(data = df_summary, aes_string(x = label, y = "value", group = "sujeto", fill = label),
+                   size = 2, shape = "O", alpha = 0.6) +
+        
         ylim(global_min - global_cut, global_max + global_cut)+
         #geom_beeswarm(corral.width = 0.1, col = label)+
         scale_fill_brewer(palette = palette, direction = -1) +
@@ -196,11 +208,11 @@ big_all <- bind_rows(big_mu, big_beta, big_gamma)
 
 
 # Ejemplo de llamada
-plot_result <- plot_violins_side_by_side(big_mu, big_beta, big_gamma, 
-                                         label = "condicion", col = "mean_trapping_time", paired = TRUE)
+#plot_result <- plot_violins_side_by_side(big_mu, big_beta, big_gamma, 
+#                                         label = "condicion", col = "mean_trapping_time", paired = TRUE)
 
 # Mostrar el plot
-plot_result
+#plot_result
 
 
 cols =  colnames(big_mu)
@@ -208,13 +220,13 @@ cols =  colnames(big_mu)
 
 # Ejemplo de llamada
 plot_result <- plot_violins_side_by_side(big_mu, big_beta, big_gamma, 
-                                         label = "condicion", col = cols[10], paired = TRUE, y_name = "Laminarity")
+                                         label = "condicion", col = cols[10], paired = TRUE, y_name = "LAM")
 
 
 # Mostrar el plot
+
+
 plot_result
-
-
 
 
 

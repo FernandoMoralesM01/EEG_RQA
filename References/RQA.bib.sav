@@ -1,0 +1,152 @@
+ 
+@Article{Gruszczynska2019,
+  author    = {Gruszczyńska, Iwona and Mosdorf, Romuald and Sobaniec, Piotr and Żochowska-Sobaniec, Milena and Borowska, Marta},
+  journal   = {Advances in Medical Sciences},
+  title     = {Epilepsy identification based on EEG signal using RQA method},
+  year      = {2019},
+  issn      = {1896-1126},
+  month     = mar,
+  number    = {1},
+  pages     = {58--64},
+  volume    = {64},
+  doi       = {10.1016/j.advms.2018.08.003},
+  file      = {:Iwona_RQA5Eplipsy_2020.pdf:PDF},
+  publisher = {Elsevier BV},
+}
+
+ 
+@Article{Pitsik2020,
+  author    = {Pitsik, Elena and Frolov, Nikita and Hauke Kraemer, K. and Grubov, Vadim and Maksimenko, Vladimir and Kurths, Jürgen and Hramov, Alexander},
+  journal   = {Chaos: An Interdisciplinary Journal of Nonlinear Science},
+  title     = {Motor execution reduces EEG signals complexity: Recurrence quantification analysis study},
+  year      = {2020},
+  issn      = {1089-7682},
+  month     = feb,
+  number    = {2},
+  volume    = {30},
+  doi       = {10.1063/1.5136246},
+  file      = {:Pitsik_LateralRQAEEG_2020.pdf:PDF},
+  publisher = {AIP Publishing},
+}
+
+ 
+@Article{Sirpal2025,
+  author    = {Sirpal, Parikshat and Parmar, Nishaal and Refai, Hazem H and Dewald, Julius P A and Yang, Yuan},
+  journal   = {Journal of Neural Engineering},
+  title     = {Contralesional recruitment and localization of EEG signal complexity in stroke: a recurrence quantification analysis of hierarchical motor tasks},
+  year      = {2025},
+  issn      = {1741-2552},
+  month     = jun,
+  number    = {3},
+  pages     = {036051},
+  volume    = {22},
+  doi       = {10.1088/1741-2552/ade6ab},
+  file      = {:Sirpal_RQA4StrokevsControl_2025.pdf:PDF},
+  publisher = {IOP Publishing},
+}
+
+ 
+@Article{Ulloa2022,
+  author    = {Ulloa, José Luis},
+  journal   = {Frontiers in Human Neuroscience},
+  title     = {The Control of Movements via Motor Gamma Oscillations},
+  year      = {2022},
+  issn      = {1662-5161},
+  month     = jan,
+  volume    = {15},
+  doi       = {10.3389/fnhum.2021.787157},
+  file      = {:Ulloa_GammaMotorControl_2022.pdf:PDF},
+  publisher = {Frontiers Media SA},
+}
+
+ 
+@Article{MARWAN2007,
+  author    = {MARWAN, N and CARMENROMANO, M and THIEL, M and KURTHS, J},
+  journal   = {Physics Reports},
+  title     = {Recurrence plots for the analysis of complex systems},
+  year      = {2007},
+  issn      = {0370-1573},
+  month     = jan,
+  number    = {5–6},
+  pages     = {237--329},
+  volume    = {438},
+  doi       = {10.1016/j.physrep.2006.11.001},
+  file      = {:RQA_marwan_2007.pdf:PDF},
+  publisher = {Elsevier BV},
+}
+
+ 
+@InProceedings{Hosni2021,
+  author    = {Hosni, Sarah M. Ismail and Borgheai, Seyyed Bahram and McLinden, John and Zhu, Shaotong and Huang, Xiaofei and Ostadabbas, Sarah and Shahriari, Yalda},
+  booktitle = {2021 43rd Annual International Conference of the IEEE Engineering in Medicine &amp; Biology Society (EMBC)},
+  title     = {Graph-based Recurrence Quantification Analysis of EEG Spectral Dynamics for Motor Imagery-based BCIs},
+  year      = {2021},
+  month     = nov,
+  pages     = {6453--6457},
+  publisher = {IEEE},
+  doi       = {10.1109/embc46164.2021.9630068},
+  file      = {:Hosni_RQA4BCI_2021.pdf:PDF},
+}
+
+ 
+@Article{Schinkel2009,
+  author    = {Schinkel, Stefan and Marwan, Norbert and Kurths, Jürgen},
+  journal   = {Journal of Physiology-Paris},
+  title     = {Brain signal analysis based on recurrences},
+  year      = {2009},
+  issn      = {0928-4257},
+  month     = nov,
+  number    = {6},
+  pages     = {315--323},
+  volume    = {103},
+  doi       = {10.1016/j.jphysparis.2009.05.007},
+  file      = {:Schinkel_RQAonBrainSig_2009.pdf:PDF},
+  publisher = {Elsevier BV},
+}
+
+@Article{Pfurtscheller1981,
+  author  = {G Pfurtscheller},
+  journal = {Electroencephalogr Clin Neurophysiology},
+  title   = {Central beta rhythm during sensorimotor activities in man.},
+  year    = {1981},
+  doi     = {10.1016/0013-4694(81)90139-5},
+}
+
+@Article{Seeber2015,
+  author   = {Martin Seeber and Reinhold Scherer and Johanna Wagner and Teodoro Solis-Escalante and Gernot R. Müller-Putz},
+  journal  = {NeuroImage},
+  title    = {High and low gamma EEG oscillations in central sensorimotor areas are conversely modulated during the human gait cycle},
+  year     = {2015},
+  issn     = {1053-8119},
+  pages    = {318-326},
+  volume   = {112},
+  abstract = {Investigating human brain function is essential to develop models of cortical involvement during walking. Such models could advance the analysis of motor impairments following brain injuries (e.g., stroke) and may lead to novel rehabilitation approaches. In this work, we applied high-density EEG source imaging based on individual anatomy to enable neuroimaging during walking. To minimize the impact of muscular influence on EEG recordings we introduce a novel artifact correction method based on spectral decomposition. High γ oscillations (>60Hz) were previously reported to play an important role in motor control. Here, we investigate high γ amplitudes while focusing on two different aspects of a walking experiment, namely the fact that a person walks and the rhythmicity of walking. We found that high γ amplitudes (60–80Hz), located focally in central sensorimotor areas, were significantly increased during walking compared to standing. Moreover, high γ (70–90Hz) amplitudes in the same areas are modulated in relation to the gait cycle. Since the spectral peaks of high γ amplitude increase and modulation do not match, it is plausible that these two high γ elements represent different frequency-specific network interactions. Interestingly, we found high γ (70–90Hz) amplitudes to be coupled to low γ (24–40Hz) amplitudes, which both are modulated in relation to the gait cycle but conversely to each other. In summary, our work is a further step towards modeling cortical involvement during human upright walking.},
+  doi      = {https://doi.org/10.1016/j.neuroimage.2015.03.045},
+  keywords = {Electroencephalography (EEG) source imaging, Human gait, High gamma oscillations, Sensorimotor system, Robotic gait training},
+  url      = {https://www.sciencedirect.com/science/article/pii/S105381191500227X},
+}
+
+@Article{undefined2003,
+  author  = {undefined},
+  journal = {Clinical Neurophysiology},
+  title   = {Basic mechanisms of central rhythms reactivity to preparation and execution of a voluntary movement: a stereoelectroencephalographic study},
+  year    = {2003},
+  doi     = {https://doi.org/10.1016/S1388-2457(02)00333-4},
+}
+
+@Article{McFarland2000,
+  author   = {McFarland, Dennis J. and Miner, Laurie A. and Vaughan, Theresa M. and Wolpaw, Jonathan R.},
+  journal  = {Brain Topography},
+  title    = {Mu and Beta Rhythm Topographies During Motor Imagery and Actual Movements},
+  year     = {2000},
+  issn     = {1573-6792},
+  number   = {3},
+  pages    = {177--186},
+  volume   = {12},
+  abstract = {People can learn to control the 8-12 Hz mu rhythm and/or the 18-25 Hz beta rhythm in the EEG recorded over sensorimotor cortex and use it to control a cursor on a video screen. Subjects often report using motor imagery to control cursor movement, particularly early in training. We compared in untrained subjects the EEG topographies associated with actual hand movement to those associated with imagined hand movement. Sixty-four EEG channels were recorded while each of 33 adults moved left- or right-hand or imagined doing so. Frequency-specific differences between movement or imagery and rest, and between right- and left-hand movement or imagery, were evaluated by scalp topographies of voltage and r spectra, and principal component analysis. Both movement and imagery were associated with mu and beta rhythm desynchronization. The mu topographies showed bilateral foci of desynchronization over sensorimotor cortices, while the beta topographies showed peak desynchronization over the vertex. Both mu and beta rhythm left/right differences showed bilateral central foci that were stronger on the right side. The independence of mu and beta rhythms was demonstrated by differences for movement and imagery for the subjects as a group and by principal components analysis. The results indicated that the effects of imagery were not simply an attenuated version of the effects of movement. They supply evidence that motor imagery could play an important role in EEG-based communication, and suggest that mu and beta rhythms might provide independent control signals.},
+  doi      = {10.1023/A:1023437823106},
+  refid    = {McFarland2000},
+  url      = {https://doi.org/10.1023/A:1023437823106},
+}
+
+@Comment{jabref-meta: databaseType:bibtex;}

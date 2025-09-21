@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<file xmlns="http://bibtexml.sf.net/">
+    <entry id="Gruszczynska2019">
+        <article>
+            <author>Gruszczyńska, Iwona and Mosdorf, Romuald and Sobaniec, Piotr and Żochowska-Sobaniec, Milena and Borowska, Marta</author>
+            <title>Epilepsy identification based on EEG signal using RQA method</title>
+            <journal>Advances in Medical Sciences</journal>
+            <year>2019</year>
+            <volume>64</volume>
+            <number>1</number>
+            <pages>58--64</pages>
+            <month>March</month>
+            <doi>10.1016/j.advms.2018.08.003</doi>
+            <issn>1896-1126</issn>
+        </article>
+    </entry>
+    <entry id="Pitsik2020">
+        <article>
+            <author>Pitsik, Elena and Frolov, Nikita and Hauke Kraemer, K. and Grubov, Vadim and Maksimenko, Vladimir and Kurths, Jürgen and Hramov, Alexander</author>
+            <title>Motor execution reduces EEG signals complexity: Recurrence quantification analysis study</title>
+            <journal>Chaos: An Interdisciplinary Journal of Nonlinear Science</journal>
+            <year>2020</year>
+            <volume>30</volume>
+            <number>2</number>
+            <month>February</month>
+            <doi>10.1063/1.5136246</doi>
+            <issn>1089-7682</issn>
+        </article>
+    </entry>
+    <entry id="Sirpal2025">
+        <article>
+            <author>Sirpal, Parikshat and Parmar, Nishaal and Refai, Hazem H and Dewald, Julius P A and Yang, Yuan</author>
+            <title>Contralesional recruitment and localization of EEG signal complexity in stroke: a recurrence quantification analysis of hierarchical motor tasks</title>
+            <journal>Journal of Neural Engineering</journal>
+            <year>2025</year>
+            <volume>22</volume>
+            <number>3</number>
+            <pages>036051</pages>
+            <month>June</month>
+            <doi>10.1088/1741-2552/ade6ab</doi>
+            <issn>1741-2552</issn>
+        </article>
+    </entry>
+    <entry id="Ulloa2022">
+        <article>
+            <author>Ulloa, José Luis</author>
+            <title>The Control of Movements via Motor Gamma Oscillations</title>
+            <journal>Frontiers in Human Neuroscience</journal>
+            <year>2022</year>
+            <volume>15</volume>
+            <month>January</month>
+            <doi>10.3389/fnhum.2021.787157</doi>
+            <issn>1662-5161</issn>
+        </article>
+    </entry>
+    <entry id="MARWAN2007">
+        <article>
+            <author>MARWAN, N and CARMENROMANO, M and THIEL, M and KURTHS, J</author>
+            <title>Recurrence plots for the analysis of complex systems</title>
+            <journal>Physics Reports</journal>
+            <year>2007</year>
+            <volume>438</volume>
+            <pages>237--329</pages>
+            <month>January</month>
+            <doi>10.1016/j.physrep.2006.11.001</doi>
+            <issn>0370-1573</issn>
+        </article>
+    </entry>
+    <entry id="Hosni2021">
+        <inproceedings>
+            <author>Hosni, Sarah M. Ismail and Borgheai, Seyyed Bahram and McLinden, John and Zhu, Shaotong and Huang, Xiaofei and Ostadabbas, Sarah and Shahriari, Yalda</author>
+            <title>Graph-based Recurrence Quantification Analysis of EEG Spectral Dynamics for Motor Imagery-based BCIs</title>
+            <booktitle>2021 43rd Annual International Conference of the IEEE Engineering in Medicine &amp;amp; Biology Society (EMBC)</booktitle>
+            <year>2021</year>
+            <pages>6453--6457</pages>
+            <month>November</month>
+            <publisher>IEEE</publisher>
+            <doi>10.1109/embc46164.2021.9630068</doi>
+        </inproceedings>
+    </entry>
+    <entry id="Schinkel2009">
+        <article>
+            <author>Schinkel, Stefan and Marwan, Norbert and Kurths, Jürgen</author>
+            <title>Brain signal analysis based on recurrences</title>
+            <journal>Journal of Physiology-Paris</journal>
+            <year>2009</year>
+            <volume>103</volume>
+            <number>6</number>
+            <pages>315--323</pages>
+            <month>November</month>
+            <doi>10.1016/j.jphysparis.2009.05.007</doi>
+            <issn>0928-4257</issn>
+        </article>
+    </entry>
+</file>
